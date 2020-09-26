@@ -1,0 +1,31 @@
+table td {
+    border: 1px solid black;
+    padding: 25px;
+}
+table{
+    border-spacing:0;
+}
+
+#grid2 td:hover{
+    background-color:#ffbdbd;
+}
+
+#grid1 td:hover{
+    background-color:#dad3d3;
+}
+
+#userLeftPrompt{
+    display:none;
+}
+
+#exitGamePrompt{
+    display:none;
+}
+
+#settingsPrompt{
+    display:none;
+}
+
+#aboutPrompt{
+    display:none;
+}

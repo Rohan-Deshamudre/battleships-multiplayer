@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Battleships: Battle of the ships</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+
+    <body>
+        <h3> Battleships </h3>
+        <h4> Battle of the ships </h4>
+        <div id="status">
+            <h4> Status Bar </h4>
+            <div id="userLeftPrompt">
+                <h4>Are you sure you want to surrender ?</h4>
+                <button id="exitYes">Yes</button>
+                <button id="exitNo">No</button>
+            </div>
+            <button id="surrender">
+                Back to the Menu
+            </button>
+            <div id="exitGamePrompt">
+                    <h4>Are you sure you want to exit the game ?</h4>
+                <button id="exitYes">Yes</button>
+                <button id="exitNo">No</button>
+            </div>
+            <button id="exitGame">
+                Exit Game
+            </button>
+        </div>
+        <div id="gameBoard">
+            <h4> Player 1 Board </h4>
+            <div id="player1Board">
+               <table id="grid1">
+                    <tr id="row0">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row1">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row2">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row3">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row4">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row5">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row6">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row7">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row8">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row9">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+               </table>
+            </div>
+            <h4> Player 2 Board </h4>
+            <div id="player2Board">
+                <table id="grid2">
+                    <tr id="row0">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row1">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row2">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row3">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row4">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row5">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row6">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row7">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row8">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                    <tr id="row9">
+                        <td id="box0"></td>
+                        <td id="box1"></td>
+                        <td id="box2"></td>
+                        <td id="box3"></td>
+                        <td id="box4"></td>
+                        <td id="box5"></td>
+                        <td id="box6"></td>
+                        <td id="box7"></td>
+                        <td id="box8"></td>
+                        <td id="box9"></td>
+                    </tr>
+                </table>   
+            </div>
+        </div>
+        <div id="toolBar">
+            <h4>ToolBar</h4>
+        </div>
+        <div id="infoBar">
+            <h4>InfoBar</h4>
+            <button id="surrender">Surrender</button>
+            <button id="howToPlay">How to Play</button>
+            <button id="settings">Settings</button>
+            <div id="settingsPrompt">
+                <h4>Sound</h4>
+                <button id="soundOn">On</button>
+                <button id="soundOff">Off</button>
+                <h4>Graphics</h4>
+                <button id="graphicsLow">Low</button>
+                <button id="graphicsHigh">High</button>
+            </div>
+            <button id="about">About</button>
+            <div id="aboutPrompt">
+                <h4>Made by: Waqas Abbasi and Julien Lamon</h4>
+                </br>
+                <h4>Made Using: Node.js, jQuery, CSS, HTML, JavaScript</h4>
+            </div>
+        </div>
+    </body>
+</html>
